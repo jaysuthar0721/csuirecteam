@@ -1,15 +1,17 @@
 # Ram Rocketry — CSU Website (Draft)
 
-Draft website for **Ram Rocketry**, the collegiate high-power rocketry organization at Colorado State University. The site showcases the club as an active, flying organization and covers its transition from NASA's University Student Launch Initiative (USLI) — via our former team, [Ram Launch Initiative](https://www.engr.colostate.edu/organizations/ramlaunch/) — to the International Rocket Engineering Competition (IREC) at Midland, Texas.
+Draft website for **Ram Rocketry**, the collegiate high-power rocketry organization at Colorado State University. Ram Rocketry is the organization at the center of the site; IREC, the Liquid Propulsion Project, and USLI (via our former team, [Ram Launch Initiative](https://www.engr.colostate.edu/organizations/ramlaunch/)) are its sub-programs, alongside the club's year-round engineering projects.
 
 Built as plain HTML/CSS/JS (no build step) so it can be uploaded directly or served with GitHub Pages.
 
 ## Pages
 
-- `index.html` — Home
-- `about.html` — Mission, history, skills
-- `projects.html` — Active Fin Stabilization, Two-Stage, Glider Rocket, Liquid Propulsion
-- `irec.html` — IREC campaign and the USLI → IREC transition story
+- `index.html` — Home, with an overview of all four programs
+- `about.html` — Mission, history (USLI → IREC → Liquid Propulsion), skills
+- `projects.html` — Programs & Projects hub: links to IREC/USLI, plus the engineering projects (Active Fin Stabilization, Two-Stage, Glider Rocket, Liquid Propulsion)
+- `irec.html` — IREC campaign, our current competition focus
+- `liquid-propulsion.html` — The Liquid Propulsion Project: vision, roadmap, and engine specs
+- `usli.html` — USLI/Ram Launch Initiative history, with a jump link to CSU's official page
 - `sponsors.html` — Funding needs and sponsorship tiers
 - `contact.html` — Contact info and message form
 
