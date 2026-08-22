@@ -20,8 +20,8 @@
   --shadow-sm: 0 1px 3px rgba(15, 42, 23, 0.08);
   --shadow-md: 0 8px 24px rgba(15, 42, 23, 0.12);
   --max-width: 1160px;
-  --font-head: "Oswald", "Arial Narrow", sans-serif;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-head: "Roboto", Arial, Helvetica, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -86,7 +86,7 @@ a:hover { color: var(--accent-orange); }
 section { padding: 72px 0; }
 .section-alt { background: var(--bg-alt); }
 .section-dark {
-  background: linear-gradient(160deg, var(--csu-green-dark), var(--csu-green));
+  background: var(--csu-green-dark);
   color: #fff;
 }
 .section-dark h1, .section-dark h2, .section-dark h3 { color: #fff; }
@@ -196,7 +196,7 @@ section { padding: 72px 0; }
 .hero {
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 82% 18%, rgba(200,195,114,0.16), transparent 45%), linear-gradient(160deg, var(--csu-green-dark) 0%, var(--csu-green) 60%, var(--csu-green-mid) 100%);
+  background: var(--csu-green-dark);
   color: #fff;
   padding: 100px 0 90px;
 }
@@ -382,7 +382,7 @@ tfoot td { font-weight: 700; color: var(--csu-green-dark); }
   width: 96px; height: 96px;
   margin: 0 auto 16px;
   border-radius: 50%;
-  background: linear-gradient(160deg, var(--csu-green), var(--csu-green-dark));
+  background: var(--csu-green-dark);
   color: var(--csu-gold);
   display: flex; align-items: center; justify-content: center;
   font-family: var(--font-head);
@@ -429,7 +429,7 @@ tfoot td { font-weight: 700; color: var(--csu-green-dark); }
 
 /* ---------- CTA banner ---------- */
 .cta-banner {
-  background: linear-gradient(120deg, var(--csu-green-dark), var(--csu-green));
+  background: var(--csu-green-dark);
   color: #fff;
   border-radius: var(--radius);
   padding: 46px;
@@ -481,7 +481,7 @@ tfoot td { font-weight: 700; color: var(--csu-green-dark); }
 
 /* ---------- Page header (interior pages) ---------- */
 .page-hero {
-  background: linear-gradient(160deg, var(--csu-green-dark), var(--csu-green));
+  background: var(--csu-green-dark);
   color: #fff;
   padding: 64px 0 54px;
 }
