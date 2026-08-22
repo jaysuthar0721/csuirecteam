@@ -478,6 +478,9 @@ tfoot td { font-weight: 700; color: var(--csu-green-dark); }
 }
 .social-row a:hover { border-color: var(--csu-gold); }
 .social-row svg { width: 16px; height: 16px; stroke: #fff; }
+.social-row.on-light a { border-color: var(--gray-200); }
+.social-row.on-light svg { stroke: var(--csu-green-dark); }
+.social-row.on-light a:hover { border-color: var(--csu-green); }
 
 /* ---------- Page header (interior pages) ---------- */
 .page-hero {
