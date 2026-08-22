@@ -10,7 +10,6 @@ Built as plain HTML/CSS/JS (no build step) so it can be uploaded directly or ser
 - `about.html` — Mission, history, skills
 - `projects.html` — Active Fin Stabilization, Two-Stage, Glider Rocket, Liquid Propulsion
 - `irec.html` — IREC campaign and the USLI → IREC transition story
-- `team.html` — Leadership team
 - `sponsors.html` — Funding needs and sponsorship tiers
 - `contact.html` — Contact info and message form
 
