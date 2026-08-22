@@ -1,0 +1,14 @@
+{
+  "client_id": "YOUR_CLIENT_ID.apps.googleusercontent.com",
+  "client_secret": "YOUR_CLIENT_SECRET",
+  "redirect_uri": "https://www.google.com",
+  "target_sleep_hours": 8.0,
+  "baseline_window_days": 30,
+  "setlog": {
+    "enabled": false,
+    "repo_path": "/full/path/to/your/setlog/repo",
+    "data_filename": "readiness_data.enc.json",
+    "max_days": 400,
+    "git_auto_push": true
+  }
+}
