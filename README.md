@@ -20,7 +20,8 @@ Built as plain HTML/CSS/JS (no build step) so it can be uploaded directly or ser
 ```
 /css/style.css     Design system + all page styles (CSU green/gold theme)
 /js/main.js        Mobile nav toggle + active nav highlighting
-/assets/           Logo, favicon, and hero illustration (SVG)
+/assets/           Logo (logo.png), favicon (favicon.png)
+/assets/photos/    Real team/launch/build photos used as hero and page-banner backgrounds
 ```
 
 ## Deploying with GitHub Pages
@@ -32,4 +33,4 @@ Built as plain HTML/CSS/JS (no build step) so it can be uploaded directly or ser
 
 ## Content sources
 
-Copy is drawn from Ram Rocketry's internal sponsorship packages, team overview docs, and funding materials (Google Drive: *Ram Rocketry / IREC*), plus public info about the club's former NASA USLI program. Placeholder avatars are used for the team page — swap in real photos before going live. Real launch/build photography from the team's Drive can also replace the SVG hero art once selected.
+Copy is drawn from Ram Rocketry's internal sponsorship packages, team overview docs, and funding materials (Google Drive: *Ram Rocketry / IREC*), plus public info about the club's former NASA USLI program. Hero and page-banner photos are real team/launch/build photography (see `/assets/photos/`); the logo and favicon are the club's actual mark, not a placeholder.

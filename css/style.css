@@ -196,7 +196,9 @@ section { padding: 72px 0; }
 .hero {
   position: relative;
   overflow: hidden;
-  background: var(--csu-green-dark);
+  background:
+    linear-gradient(100deg, rgba(15,42,23,0.88) 0%, rgba(15,42,23,0.72) 45%, rgba(15,42,23,0.4) 100%),
+    url("../assets/photos/hero-launch.jpg") center/cover no-repeat;
   color: #fff;
   padding: 100px 0 90px;
 }
@@ -489,6 +491,7 @@ tfoot td { font-weight: 700; color: var(--csu-green-dark); }
   padding: 64px 0 54px;
 }
 .page-hero h1 { color: #fff; }
+.page-hero .lede { color: rgba(255,255,255,0.88); }
 .breadcrumb { color: rgba(255,255,255,0.65); font-size: 0.85rem; margin-bottom: 14px; }
 .breadcrumb a { color: rgba(255,255,255,0.8); }
 
