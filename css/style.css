@@ -450,7 +450,9 @@ tfoot td { font-weight: 700; color: var(--csu-green-dark); }
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: var(--csu-green-dark);
+  background:
+    linear-gradient(180deg, rgba(15,42,23,0.88), rgba(15,42,23,0.93)),
+    url("../assets/photos/sponsors-team.jpg") center 55%/cover no-repeat;
   color: rgba(255,255,255,0.75);
   padding: 56px 0 26px;
 }
