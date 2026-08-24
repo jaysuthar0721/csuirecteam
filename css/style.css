@@ -71,17 +71,13 @@ a:hover { color: var(--accent-orange); }
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 0.78rem;
-  color: var(--accent-orange);
+  color: var(--csu-green);
   font-weight: 500;
   margin-bottom: 10px;
 }
-.eyebrow::before {
-  content: "";
-  width: 22px;
-  height: 2px;
-  background: var(--accent-orange);
-  display: inline-block;
-}
+.hero .eyebrow,
+.page-hero .eyebrow,
+.section-dark .eyebrow { color: var(--csu-gold); }
 
 section { padding: 72px 0; }
 .section-alt { background: var(--bg-alt); }
@@ -273,7 +269,7 @@ section { padding: 72px 0; }
 /* ---------- Transition callout ---------- */
 .callout {
   border: 1px solid var(--gray-200);
-  border-left: 5px solid var(--accent-orange);
+  border-left: 5px solid var(--csu-gold);
   background: #fff;
   border-radius: var(--radius);
   padding: 30px 32px;
@@ -282,7 +278,7 @@ section { padding: 72px 0; }
 .callout h3 { margin-bottom: 10px; }
 .callout .tag {
   display: inline-block;
-  background: var(--accent-orange);
+  background: var(--csu-green-dark);
   color: #fff;
   font-family: var(--font-head);
   text-transform: uppercase;
@@ -354,8 +350,9 @@ section { padding: 72px 0; }
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent-orange);
+  color: var(--csu-green);
 }
+.section-dark .phase-tag { color: var(--csu-gold); }
 
 /* ---------- Tables ---------- */
 table { width: 100%; border-collapse: collapse; margin: 18px 0 30px; }
@@ -406,6 +403,24 @@ tfoot td { font-weight: 700; color: var(--csu-green-dark); }
   font-weight: 500;
 }
 .section-dark .chip { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); color: #fff; }
+
+/* ---------- Sponsor logos ---------- */
+.sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+  margin-top: 8px;
+}
+.sponsor-logos img {
+  height: 56px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.75;
+  transition: filter 0.2s ease, opacity 0.2s ease;
+}
+.sponsor-logos a:hover img { filter: grayscale(0%); opacity: 1; }
 
 /* ---------- Tiers ---------- */
 .tier-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
