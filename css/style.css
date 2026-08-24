@@ -511,13 +511,14 @@ tfoot td { font-weight: 700; color: var(--csu-green-dark); }
   align-items: center;
 }
 .list-check { list-style: none; padding: 0; margin: 0; }
-.list-check li { position: relative; padding-left: 28px; margin-bottom: 12px; color: var(--gray-700); }
+.list-check li { position: relative; padding-left: 26px; margin-bottom: 12px; color: var(--gray-700); }
 .list-check li::before {
-  content: "";
-  position: absolute; left: 0; top: 6px;
-  width: 16px; height: 16px;
-  border-radius: 4px;
-  background: var(--csu-gold);
+  content: "\2192";
+  position: absolute; left: 0; top: 0;
+  color: var(--csu-green);
+  font-weight: 700;
+  font-size: 1.05em;
+  line-height: 1.6;
 }
 
 /* ---------- Responsive ---------- */
