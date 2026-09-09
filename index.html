@@ -22,6 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/home.css" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -44,19 +45,20 @@
 }
 </script>
 </head>
-<body>
+<body class="home">
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <header class="site-header">
-  <nav class="container nav">
+  <nav class="container nav" aria-label="Main navigation">
     <a href="index.html" class="brand">
-      <img src="assets/logo.png" alt="Ram Rocketry crest" />
+      <img src="assets/logo.png" width="48" height="48" alt="Ram Rocketry crest" />
       <span>Ram Rocketry<span class="brand-sub">Colorado State University</span></span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="main-navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-    <ul class="nav-links">
-      <li><a href="index.html" data-page="index.html">Home</a></li>
+    <ul class="nav-links" id="main-navigation">
+      <li><a href="index.html" data-page="index.html" aria-current="page">Home</a></li>
       <li><a href="about.html" data-page="about.html">About</a></li>
       <li><a href="projects.html" data-page="projects.html">Projects</a></li>
       <li><a href="irec.html" data-page="irec.html">IREC</a></li>
@@ -67,179 +69,114 @@
   </nav>
 </header>
 
-<main>
-
-  <section class="hero">
+<main id="main-content" tabindex="-1">
+  <section class="hero" aria-labelledby="hero-title">
     <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">Colorado State University · Est. Student Rocketry Org</span>
-        <h1>We build and fly high-power rockets.</h1>
-        <p class="lede">Ram Rocketry is CSU's collegiate high-power rocketry organization. We're a hands-on team of student engineers who run a High-Power Rocketry certification program, build ambitious engineering projects, and compete nationally and internationally, from NASA's University Student Launch Initiative to the International Rocket Engineering Competition (IREC) and our own student-built Liquid Propulsion Project.</p>
+      <div class="hero-copy">
+        <span class="eyebrow">Colorado State University</span>
+        <h1 id="hero-title">We build.<br>We fly.<br><span>Ram Rocketry.</span></h1>
+        <p class="lede">Student engineers building, testing, and flying high-power rockets. From your first certification flight to our next IREC competition.</p>
         <div class="btn-row">
-          <a href="projects.html" class="btn btn-gold">See Our Programs</a>
-          <a href="about.html" class="btn btn-outline">About Ram Rocketry</a>
+          <a href="#programs" class="btn btn-gold">Explore our programs <span aria-hidden="true">↗</span></a>
+          <a href="contact.html" class="btn btn-outline">Join the team</a>
         </div>
-        <div class="badge-strip">
-          <span class="badge"><span class="dot"></span>Active &amp; flying members</span>
-          <span class="badge"><span class="dot"></span>HPR Level 1 &amp; 2 certifications</span>
-          <span class="badge"><span class="dot"></span>4 rockets in development</span>
+        <div class="hero-mission">
+          <span class="mission-label">Next competition</span>
+          <a href="irec.html">IREC 2027 <span aria-hidden="true">/</span> 10,000 ft target</a>
         </div>
       </div>
+      <figure class="rocket-figure" aria-labelledby="rocket-caption">
+        <div class="rocket-stage" id="rocket-stage">
+          <div class="stage-heading" aria-hidden="true"><span>RAM / IREC</span><span>01</span></div>
+          <img class="rocket-fallback" src="assets/photos/hero-launch.jpg" width="1525" height="1920" alt="A green and white CSU rocket launching from the field." fetchpriority="high">
+          <canvas id="rocket-canvas" hidden tabindex="0" role="img" aria-label="Interactive 3D concept rocket in CSU green, white, and gold" aria-describedby="rocket-help"></canvas>
+          <p class="stage-note" id="rocket-help" hidden>Drag left or right to rotate. Use arrow keys when focused.</p>
+        </div>
+        <figcaption id="rocket-caption">
+          <div><span class="render-label" id="rocket-label">Ram Rocketry in flight</span><span class="render-subtitle" id="rocket-subtitle">Colorado State University</span></div>
+          <div class="rocket-controls" id="rocket-controls" role="group" aria-label="Rocket view controls" hidden>
+            <button type="button" id="rocket-rotate" aria-pressed="true">Auto-rotate</button>
+            <button type="button" id="rocket-reset">Reset view</button>
+          </div>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
-  <section class="stat-strip">
+  <section class="stat-strip" aria-label="Ram Rocketry at a glance">
     <div class="container stat-grid">
-      <div><span class="num">4</span><span class="label">Active Rocket Projects</span></div>
-      <div><span class="num">2</span><span class="label">Competition Programs · IREC 2027 &amp; 2028</span></div>
-      <div><span class="num">L1&nbsp;/&nbsp;L2</span><span class="label">In-House HPR Certification Program</span></div>
-      <div><span class="num">7th</span><span class="label">of 67 Teams · Our Debut NASA Competition Finish</span></div>
+      <div><span class="num">10,000<span class="stat-unit"> ft</span></span><span class="label">IREC 2027 target</span></div>
+      <div><span class="num">4</span><span class="label">Engineering projects</span></div>
+      <div><span class="num">L1 / L2</span><span class="label">Certification program</span></div>
+      <div><span class="num">2028</span><span class="label">Liquid flight goal</span></div>
     </div>
   </section>
 
-  <section>
+  <section class="programs-section" id="programs" aria-labelledby="programs-title">
     <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Our Programs</span>
-        <h2>What we're working on.</h2>
-        <p>Ram Rocketry isn't just one competition. Here's how the club's work breaks down.</p>
+      <div class="section-head section-head-row">
+        <div><span class="eyebrow">01 / Our programs</span><h2 id="programs-title">One team. A lot to build.</h2></div>
+        <p>Competition vehicles, experimental propulsion, and the projects that get us there.</p>
       </div>
-      <div class="grid grid-4">
-        <a class="card" href="irec.html">
-          <span class="status">Current Campaign</span>
-          <h3>IREC</h3>
-          <p>Our flagship competition: a 10,000&nbsp;ft COTS solid rocket at the International Rocket Engineering Competition in Midland, Texas, in 2027.</p>        </a>
-        <a class="card" href="liquid-propulsion.html">
-          <span class="status">2026 – 2028</span>
-          <h3>Liquid Propulsion</h3>
-          <p>Building Colorado State University's first student-led liquid rocket engine, targeting a flight vehicle at IREC 2028.</p>        </a>
-        <a class="card" href="usli.html">
-          <span class="status">2022 – 2025</span>
-          <h3>USLI</h3>
-          <p>Our roots: two years competing in NASA's University Student Launch Initiative through Ram Launch Initiative, finishing 7th of 67 teams.</p>        </a>
-        <a class="card" href="projects.html">
-          <span class="status">Year-Round</span>
-          <h3>Engineering Projects</h3>
-          <p>Active Fin Stabilization, a two-stage rocket, a glider rocket, and more, the R&amp;D projects our members build and fly.</p>        </a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="callout">
-        <span class="tag">New to Rocketry?</span>
-        <h3>Not sure what "dual-deploy" or "COTS" means?</h3>
-        <p style="margin-bottom:0;">Our Learn Rocketry guide breaks down the jargon, explains certification levels, and points you to trusted resources for getting started. <a href="learn-rocketry.html">Learn the basics →</a></p>
+      <div class="program-grid">
+        <a class="program-card program-feature" href="irec.html">
+          <img src="assets/photos/irec-launch.jpg" alt="A high-power rocket climbing into the sky with a white exhaust trail" width="765" height="1148" loading="lazy">
+          <div class="program-content"><span class="status">Current campaign · 2027</span><h3>IREC</h3><p>A student-designed rocket. A commercial solid motor. A 10,000 ft target.</p><span class="card-link">Explore the campaign <span aria-hidden="true">↗</span></span></div>
+        </a>
+        <a class="program-card program-liquid" href="liquid-propulsion.html">
+          <div class="program-top"><span class="status">2026–2028</span><span class="program-number" aria-hidden="true">02</span></div>
+          <h3>Liquid<br>propulsion</h3><p>Designing, building, and testing our own liquid rocket engine, with a flight vehicle as the next step.</p><span class="card-link">Follow the development <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="program-card program-projects" href="projects.html">
+          <div class="program-top"><span class="status">Year-round</span><span class="program-number" aria-hidden="true">03</span></div>
+          <h3>Engineering<br>projects</h3><p>Active fin stabilization, a two-stage rocket, and a glider rocket. Built and flown by our members.</p><span class="card-link">See the projects <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="program-card program-history" href="usli.html">
+          <div><span class="status">Our competition roots · 2022–2025</span><h3>NASA Student Launch</h3><p>Where Ram Launch Initiative built our foundation in competition rocketry.</p></div><span class="card-link">Read our USLI story <span aria-hidden="true">↗</span></span>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="section-alt">
+  <section class="team-section section-alt" aria-labelledby="team-title">
     <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">What We Do</span>
-        <h2>Hands-on rocketry and real aerospace engineering experience.</h2>
-        <p>Ram Rocketry is a collegiate rocketry organization built around learning by doing. We welcome everyone, from seasoned high-power enthusiasts to students who are simply curious about space. Members earn High-Power Rocketry certifications and pick up real aerospace engineering experience across a range of ambitious projects.</p>
+      <div class="team-intro">
+        <div class="team-photo"><img src="assets/photos/about-team.jpg" width="1920" height="1280" alt="Ram Rocketry members together on the steps at Colorado State University" loading="lazy"><span>Student run. Built together.</span></div>
+        <div class="team-copy"><span class="eyebrow">02 / Life on the team</span><h2 id="team-title">Your first rocket.<br>Your next challenge.</h2><p>We welcome students who are curious about space and ready to make something. Learn from other members, get hands-on experience, and see your work leave the launch rail.</p><a href="about.html" class="text-link">Meet Ram Rocketry <span aria-hidden="true">↗</span></a></div>
       </div>
-      <div class="grid grid-3">
-        <div class="card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 8 8h8z"/><path d="M8 8v8a4 4 0 0 0 8 0V8"/></svg></div>
-          <h3>Certification Program</h3>
-          <p>We run High-Power Rocketry Level 1 &amp; 2 certification flights all year, built around our own in-house, 3D-printable, flight-tested L1 kit.</p>
-        </div>
-        <div class="card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-          <h3>Real Engineering Skills</h3>
-          <p>MATLAB, Simulink, CAD (SolidWorks &amp; Fusion 360), CFD, FEA, Python, and C++, applied across full rocket design, build, and flight cycles.</p>
-        </div>
-        <div class="card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20h5v-2a4 4 0 0 0-3-3.87M9 20H4v-2a4 4 0 0 1 3-3.87m5-4a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm6 0a4 4 0 1 0-1-7.87"/></svg></div>
-          <h3>Industry Networking</h3>
-          <p>We host site visits and networking events with companies including Lockheed Martin, United Launch Alliance, Sierra Space, and Ursa Major.</p>
-        </div>
+      <div class="experience-grid">
+        <div><span class="experience-number">01</span><h3>Get flight certified</h3><p>Build toward High-Power Rocketry Level 1 and 2 certifications with our flight-tested, 3D-printable L1 kit.</p></div>
+        <div><span class="experience-number">02</span><h3>Put theory to work</h3><p>CAD, simulation, electronics, manufacturing, and flight testing. Real hardware connects it all.</p></div>
+        <div><span class="experience-number">03</span><h3>Meet the industry</h3><p>Learn through company visits and networking with aerospace engineers, including teams at Ursa Major and Sierra Space.</p></div>
       </div>
+      <div class="learn-callout"><div><span class="eyebrow">New to rocketry?</span><p>Start with the basics: motors, recovery, and your first certification.</p></div><a href="learn-rocketry.html" class="btn btn-outline-dark">Learn rocketry <span aria-hidden="true">↗</span></a></div>
     </div>
   </section>
 
-  <section>
-    <div class="container">
-      <div class="section-head center">
-        <span class="eyebrow">Current Projects</span>
-        <h2>Four rockets currently in development.</h2>
-      </div>
-      <div class="grid grid-4">
-        <div class="card">
-          <span class="status">In Development</span>
-          <h3>Active Fin Stabilization</h3>
-          <p>Servo-actuated fins and onboard avionics demonstrating 3-axis (roll, pitch, yaw) control in flight.</p>
-        </div>
-        <div class="card">
-          <span class="status">Competition Build</span>
-          <h3>Two-Stage Rocket</h3>
-          <p>Carrying the maximum number of golf balls to the highest altitude possible under a strict impulse limit.</p>
-        </div>
-        <div class="card">
-          <span class="status">In Development</span>
-          <h3>Glider Rocket</h3>
-          <p>A rocket that transitions mid-flight into a remotely piloted glider for controlled, winged recovery.</p>
-        </div>
-        <a class="card" href="liquid-propulsion.html">
-          <span class="status">IREC 2028 Track</span>
-          <h3>Liquid Propulsion</h3>
-          <p>CSU's first student-led liquid rocket engine: a bi-propellant, pressure-fed design targeting IREC 2028.</p>        </a>
-      </div>
-      <div class="text-center" style="margin-top:32px;">
-        <a href="projects.html" class="btn btn-outline-dark">View All Projects</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-dark">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Two-Year Mission Roadmap</span>
-        <h2>What's ahead over the next two years.</h2>
-      </div>
+  <section class="roadmap-section section-dark" aria-labelledby="roadmap-title">
+    <div class="container roadmap-layout">
+      <div class="section-head"><span class="eyebrow">03 / The road ahead</span><h2 id="roadmap-title">From the workshop<br>to the launch rail.</h2><p>Two parallel programs, with every design review and test building toward flight.</p></div>
       <div class="timeline">
-        <div class="timeline-item">
-          <span class="phase-tag">Phase 1 · 2026–2027</span>
-          <h3>IREC 2027: 10,000 ft COTS Solid Rocket</h3>
-          <p>A full, student-designed high-power rocket, complete with airframe, nosecone, fins, dual-deploy recovery, and an airbrake system, flying on a commercial off-the-shelf solid motor toward a 10,000&nbsp;ft target apogee at IREC in Midland, Texas.</p>
-        </div>
-        <div class="timeline-item">
-          <span class="phase-tag">Phase 2 · 2026–2028</span>
-          <h3>Liquid Propulsion Engine Development &amp; Static Fire</h3>
-          <p>In parallel, our Liquid Propulsion team is designing, manufacturing, and hot-fire testing a student-built, pressure-fed bi-propellant engine (ethanol/N₂O) with a pintle injector and ablative cooling.</p>
-        </div>
-        <div class="timeline-item">
-          <span class="phase-tag">Phase 2 · 2028</span>
-          <h3>IREC 2028: Liquid-Propelled Rocket Flight</h3>
-          <p>Integrating our validated engine into a flight vehicle and competing at IREC, targeting a 10,000&nbsp;ft apogee. That would make Ram Rocketry one of very few collegiate teams flying a student-designed liquid engine internationally.</p>
-        </div>
+        <div class="timeline-item"><span class="phase-tag">2026–2027 / Solid rocket</span><h3>IREC 2027</h3><p>A 10,000 ft COTS campaign with a student-designed airframe, dual-deploy recovery, onboard avionics, and active airbrakes.</p></div>
+        <div class="timeline-item"><span class="phase-tag">2026–2028 / Engine development</span><h3>Build. Test. Static fire.</h3><p>Design, manufacture, and hot-fire a student-built, pressure-fed liquid rocket engine.</p></div>
+        <div class="timeline-item"><span class="phase-tag">2028 / Flight goal</span><h3>Fly our own propulsion.</h3><p>Integrate the validated engine into a flight vehicle targeting IREC 2028.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="section-alt">
-    <div class="container">
-      <div class="cta-banner">
-        <div>
-          <h2>Help us get to Midland, Texas.</h2>
-          <p>Sponsorships fund every motor, airframe, and avionics package we fly. See what your investment builds!</p>
-        </div>
-        <a href="sponsors.html" class="btn btn-gold">View Sponsorship Packages</a>
-      </div>
+  <section class="support-section">
+    <div class="container cta-banner">
+      <div><span class="eyebrow">Help make the next flight possible</span><h2>Back the team.<br>Build what comes next.</h2><p>Sponsorship funds the motors, materials, and avionics our students turn into flight hardware.</p></div>
+      <a href="sponsors.html" class="btn btn-gold">Explore sponsorship <span aria-hidden="true">↗</span></a>
     </div>
   </section>
-
 </main>
 
 <footer class="site-footer" id="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand"><img src="assets/logo.png" alt="Ram Rocketry crest" />Ram Rocketry</div>
+        <div class="footer-brand"><img src="assets/logo.png" width="48" height="48" alt="Ram Rocketry crest" />Ram Rocketry</div>
         <p style="color:rgba(255,255,255,0.65); font-size:0.9rem;">A collegiate high-power rocketry organization at Colorado State University, competing at the International Rocket Engineering Competition.</p>
       </div>
       <div>
@@ -274,5 +211,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script type="module" src="js/rocket-viewer.js"></script>
 </body>
 </html>
