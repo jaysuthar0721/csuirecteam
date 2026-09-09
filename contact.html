@@ -48,29 +48,30 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <header class="site-header">
-  <nav class="container nav">
+  <nav class="container nav" aria-label="Main navigation">
     <a href="index.html" class="brand">
-      <img src="assets/logo.png" alt="Ram Rocketry crest" />
+      <img src="assets/logo.png" width="48" height="48" alt="Ram Rocketry crest" />
       <span>Ram Rocketry<span class="brand-sub">Colorado State University</span></span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="main-navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-    <ul class="nav-links">
+    <ul class="nav-links" id="main-navigation">
       <li><a href="index.html" data-page="index.html">Home</a></li>
       <li><a href="about.html" data-page="about.html">About</a></li>
       <li><a href="projects.html" data-page="projects.html">Projects</a></li>
       <li><a href="irec.html" data-page="irec.html">IREC</a></li>
       <li><a href="sponsors.html" data-page="sponsors.html">Sponsors</a></li>
-      <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+      <li><a href="contact.html" data-page="contact.html" aria-current="page">Contact</a></li>
       <li><a href="sponsors.html" class="btn btn-gold">Sponsor Us</a></li>
     </ul>
   </nav>
 </header>
 
-<main>
+<main id="main-content" tabindex="-1">
 
   <section class="page-hero" style="background: linear-gradient(100deg, rgba(15,42,23,0.85) 0%, rgba(15,42,23,0.6) 100%), url('assets/photos/contact-meeting.jpg') center 70%/cover no-repeat;">
     <div class="container">
@@ -145,7 +146,7 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand"><img src="assets/logo.png" alt="Ram Rocketry crest" />Ram Rocketry</div>
+        <div class="footer-brand"><img src="assets/logo.png" width="48" height="48" alt="Ram Rocketry crest" />Ram Rocketry</div>
         <p style="color:rgba(255,255,255,0.65); font-size:0.9rem;">A collegiate high-power rocketry organization at Colorado State University, competing at the International Rocket Engineering Competition.</p>
       </div>
       <div>
